@@ -1,64 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Car Rental</title>
-    <link rel="stylesheet" href="carental.css">
 </head>
-
 <body>
-    <div id="search">
-        <div class="title">
-            <h1>Car Rental</h1>
-            <p>Find the perfect car for your next adventure</p>
-            <hr>
-        </div>
-        <div class="form-container">
-            <div class="form-group">
-                <label for="pickup">Rental Location:</label>
-                <select id="pickup" name="pickup">
-                    <option value="">Select Location</option>
-                    <option value="location1">Yogyakarta</option>
-                    <option value="location2">Bali</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="pickup-date">Rental Start Date:</label>
-                <input type="date" id="pickup-date" name="pickup-date">
-            </div>
-            <div class="form-group">
-                <label for="return-date">Rental End Date:</label>
-                <input type="date" id="return-date" name="return-date">
-            </div>
-            <button type="submit">Search</button>
-        </div>
+
+    <!-- HEADER -->
+    <h1>Car Rental</h1>
+    <p>Find the perfect car for your next adventure</p>
+    <hr>
+
+    <!-- FORM -->
+    <h2>Search Car</h2>
+
+    <label>Rental Location:</label>
+    <select>
+        <option>Yogyakarta</option>
+        <option>Bali</option>
+    </select>
+
+    <br><br>
+
+    <label>Rental Start Date:</label>
+    <input type="date">
+
+    <br><br>
+
+    <label>Rental End Date:</label>
+    <input type="date">
+
+    <br><br>
+
+    <button>Search</button>
+
+    <hr>
+
+    <!-- CAR LIST -->
+    <h2>Car List</h2>
+
+    <div>
+        <img src="https://via.placeholder.com/200" alt="Mazda 2">
+        <h3>Mazda 2</h3>
+        <p>Rp 500.000 / hari</p>
     </div>
 
-    <div class="car-list">
-        <h2>Car List</h2>
-        <div class="car-item">
-            <img src="url" alt="Car 1">
-            <h3>Car 1</h3>
-            <p>Car Detail</p>
-        </div>
-        <div class="car-item">
-            <img src="url" alt="Car 2">
-            <h3>Car 2</h3>
-            <p>Car Detail</p>
-        </div>
-        <div class="car-item">
-            <img src="url" alt="Car 2">
-            <h3>Car 2</h3>
-            <p>Car Detail</p>
-        </div>
-        <div class="car-item">
-            <img src="url" alt="Car 2">
-            <h3>Car 2</h3>
-            <p>Car Detail</p>
-        </div>
+    <div>
+        <img src="https://via.placeholder.com/200" alt="Mazda 3">
+        <h3>Mazda 3</h3>
+        <p>Rp 650.000 / hari</p>
     </div>
+
+    <div>
+        <img src="https://via.placeholder.com/200" alt="Mazda MX-5">
+        <h3>Mazda MX-5</h3>
+        <p>Rp 1.500.000 / hari</p>
+    </div>
+
+    <div>
+        <img src="https://via.placeholder.com/200" alt="Mazda 6">
+        <h3>Mazda 6</h3>
+        <p>Rp 950.000 / hari</p>
+    </div>
+
+    <div>
+        <img src="https://via.placeholder.com/200" alt="Mazda RX-7">
+        <h3>Mazda RX-7</h3>
+        <p>Rp 2.500.000 / hari</p>
+    </div>
+
 </body>
-
 </html>
