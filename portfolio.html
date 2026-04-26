@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio Purnomo</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg1:#6fb1ff;
+  --bg2:#cce7ff;
+  --accent:#2563eb;
+  --accent2:#38bdf8;
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  color:#000;
+  background: linear-gradient(135deg,var(--bg1),var(--bg2));
+  scroll-behavior:smooth;
+}
+
+body.dark{
+  color:#fff;
+  background: linear-gradient(135deg,#0f172a,#020617);
+}
+
+
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:14px 28px;
+  position:sticky;
+  top:0;
+  background:rgba(255,255,255,.5);
+  backdrop-filter:blur(12px);
+  box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+body.dark nav{background:rgba(0,0,0,.55)}
+
+nav .menu a{
+  margin:0 10px;
+  text-decoration:none;
+  font-weight:600;
+  color:inherit;
+}
+
+
+header{
+  text-align:center;
+  padding:48px 16px;
+}
+
+.typing{
+  font-size:28px;
+  font-weight:700;
+  margin-bottom:18px;
+}
+
+.profile{
+  width:150px;
+  height:150px;
+  border-radius:50%;
+  border:5px solid rgba(255,255,255,.8);
+  box-shadow:0 0 30px rgba(255,255,255,1);
+  transition:.3s;
+}
+
+.profile:hover{
+  transform:scale(1.08);
+}
+
+h1{
+  font-size:48px;
+  margin:10px 0;
+  background: linear-gradient(to right,#005eff,#00c6ff);
+  -webkit-background-clip:text;
+  color:transparent;
+}
+
+.badge{
+  display:inline-block;
+  margin-top:10px;
+  padding:8px 18px;
+  border-radius:20px;
+  background:#fff;
+  color:#000;
+  font-weight:600;
+}
+
+body.dark .badge{
+  background:rgba(255,255,255,.1);
+  color:#fff;
+}
+
+
+.section{
+  max-width:1200px;
+  margin:auto;
+  padding:20px;
+}
+
+.grid{
+  display:grid;
+  gap:20px;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+}
+
+.card{
+  background:rgba(255,255,255,.85);
+  padding:20px;
+  border-radius:18px;
+  backdrop-filter:blur(10px);
+  box-shadow:0 10px 25px rgba(0,0,0,.15);
+  transition:.3s;
+  height:100%;
+}
+
+.card:hover{
+  transform:translateY(-8px);
+}
+
+body.dark .card{
+  background:rgba(15,23,42,.85);
+}
+
+.progress{
+  height:8px;
+  background:#ddd;
+  border-radius:10px;
+  margin:5px 0 15px;
+}
+
+.progress div{
+  height:100%;
+  background:linear-gradient(to right,var(--accent),var(--accent2));
+  border-radius:10px;
+}
+
+button{
+  padding:10px 15px;
+  border:none;
+  border-radius:10px;
+  background:linear-gradient(to right,var(--accent),var(--accent2));
+  color:white;
+  cursor:pointer;
+  transition:.3s;
+}
+
+button:hover{
+  transform:scale(1.05);
+}
+
+
+.info-bar{
+  max-width:1200px;
+  margin:20px auto;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  text-align:center;
+  padding:15px;
+  border-radius:15px;
+  background:rgba(255,255,255,.7);
+}
+
+body.dark .info-bar{
+  background:rgba(15,23,42,.85);
+}
+
+footer{
+  text-align:center;
+  padding:15px;
+}
+
+@media(max-width:600px){
+  h1{font-size:36px}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div><b>P</b></div>
+  <div class="menu">
+    <a href="#">Home</a>
+    <a href="#">Tentang</a>
+    <a href="#">Skill</a>
+    <a href="#">Tools</a>
+  </div>
+  <button onclick="toggleDark()">🌙</button>
+</nav>
+
+<header>
+  <div id="typing" class="typing"></div>
+  <img src="https://via.placeholder.com/150" class="profile">
+  <h1>PURNOMO</h1>
+  <p>NIM: 241110011</p>
+  <div class="badge">Network Engineer | Network Administrator | IT Support</div>
+</header>
+
+<section class="section">
+<div class="grid">
+
+<div class="card">
+<h3>Tentang Saya</h3>
+<p>Saya mahasiswa Informatika yang fokus di bidang Jaringan.</p>
+</div>
+
+<div class="card">
+<h3>Skills</h3>
+Jaringan
+<div class="progress"><div style="width:90%"></div></div>
+Cisco
+<div class="progress"><div style="width:85%"></div></div>
+Troubleshooting
+<div class="progress"><div style="width:88%"></div></div>
+</div>
+
+<div class="card">
+<h3>Proyek</h3>
+<p>Website portfolio modern</p>
+<button>Lihat</button>
+</div>
+
+<div class="card">
+<h3>Hobi</h3>
+<ul>
+<li>Game</li>
+<li>Musik</li>
+<li>Belajar</li>
+</ul>
+</div>
+
+</div>
+</section>
+
+<section class="section">
+<div class="card">
+<h3>Tools</h3>
+<ul>
+<li>Winbox</li>
+<li>Cisco Packet Tracer</li>
+<li>Wireshark</li>
+<li>Mikrotik</li>
+</ul>
+</div>
+</section>
+
+<div class="info-bar">
+<div>Mahasiswa<br>Mercu Buana Yogyakarta</div>
+<div>Asal<br>Jambi</div>
+<div>Email<br>purnomoamin319@gmail.com</div>
+<div>Tanggal Lahir<br>2 Maret 2003</div>
+</div>
+
+
+<footer>© Purnomo</footer>
+
+<script>
+const text="SELAMAT DATANG DI WEBSITE PURNOMO";
+let i=0;
+function typing(){
+ if(i<text.length){
+  document.getElementById('typing').innerHTML+=text[i++];
+  setTimeout(typing,50);
+ }
+}
+typing();
+
+function toggleDark(){
+ document.body.classList.toggle('dark');
+}
+</script>
+
+</body>
+</html>
