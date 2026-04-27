@@ -1,28 +1,81 @@
-<!DOCTYPE html>
-<html>
-<head>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home - PURNOMO</title>
-</head>
-<body>
-
-    <h1>Website Tugas Pemrograman Web</h1>
-    <h2>PURNOMO - 241110011</h2>
-
-    <hr>
-
-    <h3>P01</h3>
-    <ul>
-        <li><a href="latihan1.html">Latihan 1</a></li>
-        <li><a href="latihan2.html">Latihan 2</a></li>
-    </ul>
-
-    <h3>P02</h3>
-    <ul>
-        <li><a href="nav.html">Navigation</a></li>
-        <li><a href="list.html">List</a></li>
-        <li><a href="form.html">Form</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-    </ul>
-
-</body>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: "Poppins", sans-serif;
+      background-color: #f0f0f0;
+      color: #333;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 24px;
+      }
+    }
+  </style>
+  <body>
+    <header style="line-height: 1.5; text-align: center">
+      <nav
+        style="
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 1rem;
+        "
+      >
+        <ul style="display: flex; gap: 20px; list-style: none; font-size: 18px">
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="portfolio.html">Portfolio</a>
+          </li>
+          <li>
+            <a href="materi.html">Materi</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <hr />
+    <div style="text-align: center; padding: 1rem">
+      <h1 style="">Selamat Datang di Website Saya</h1>
+      <p style="font-size: 24px; font-weight: 600; padding-top: 1rem">
+        PURNOMO - 241110011
+      </p>
+      <br />
+      <div>
+        <p>Kata-kata hari ini: <br />Jangan menyerah belajar coding!</p>
+      </div>
+      <br />
+      <img
+        src="nyawit.jpg"
+        alt="nyawit"
+        style="width: auto; max-width: 400px; border-radius: 1rem"
+      />
+      <br />
+      <br />
+      <h2>
+        <a href="portfolio.html" style="color: rgb(79, 79, 201)"
+          >Lihat Portfolio Saya...</a
+        >
+      </h2>
+    </div>
+  </body>
 </html>
