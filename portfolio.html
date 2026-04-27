@@ -27,6 +27,7 @@
         color: #000;
         background: linear-gradient(135deg, var(--bg1), var(--bg2));
         scroll-behavior: smooth;
+        width: 100%;
       }
 
       body.dark {
@@ -44,6 +45,7 @@
         background: rgba(255, 255, 255, 0.5);
         backdrop-filter: blur(12px);
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        z-index: 100;
       }
 
       body.dark nav {
@@ -55,6 +57,12 @@
         text-decoration: none;
         font-weight: 600;
         color: inherit;
+      }
+
+      nav .menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
       }
 
       header {
@@ -85,6 +93,7 @@
         font-size: 48px;
         margin: 10px 0;
         background: linear-gradient(to right, #005eff, #00c6ff);
+        background-clip: text;
         -webkit-background-clip: text;
         color: transparent;
       }
@@ -161,11 +170,31 @@
         transform: scale(1.05);
       }
 
+      button:focus-visible,
+      .project-link:focus-visible {
+        outline: 2px solid #fff;
+        outline-offset: 2px;
+      }
+
+      .project-link {
+        display: inline-block;
+        padding: 10px 15px;
+        border-radius: 10px;
+        background: linear-gradient(to right, var(--accent), var(--accent2));
+        color: white;
+        text-decoration: none;
+        transition: 0.3s;
+      }
+
+      .project-link:hover {
+        transform: scale(1.05);
+      }
+
       .info-bar {
         max-width: 1200px;
         margin: 20px auto;
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
         text-align: center;
         padding: 15px;
         border-radius: 15px;
@@ -182,8 +211,30 @@
       }
 
       @media (max-width: 600px) {
+        nav {
+          padding: 12px 14px;
+          gap: 10px;
+        }
+
+        nav .menu a {
+          margin: 0 6px;
+          font-size: 14px;
+        }
+
+        .typing {
+          font-size: 22px;
+        }
+
         h1 {
           font-size: 36px;
+        }
+        .info-bar {
+          grid-template-columns: 1fr;
+          margin: 20px;
+          gap: 1rem;
+        }
+        .info-bar div {
+          padding: 10px 0 10px 0;
         }
       }
     </style>
@@ -197,12 +248,22 @@
         <a href="portfolio.html">Portfolio</a>
         <a href="materi.html">Materi</a>
       </div>
-      <button onclick="toggleDark()">🌙</button>
+      <button
+        type="button"
+        aria-label="Toggle dark mode"
+        onclick="toggleDark()"
+      >
+        🌙
+      </button>
     </nav>
 
     <header>
       <div id="typing" class="typing"></div>
-      <img src="https://via.placeholder.com/150" class="profile" />
+      <img
+        src="https://via.placeholder.com/150"
+        class="profile"
+        alt="Foto profil Purnomo"
+      />
       <h1>PURNOMO</h1>
       <p>NIM: 241110011</p>
       <div class="badge">
@@ -230,7 +291,7 @@
         <div class="card">
           <h3>Proyek</h3>
           <p>Website portfolio modern</p>
-          <button>Lihat</button>
+          <a class="project-link" href="#tools">Lihat Tools</a>
         </div>
 
         <div class="card">
@@ -268,9 +329,10 @@
     <script>
       const text = "SELAMAT DATANG DI WEBSITE PURNOMO";
       let i = 0;
+      const typingElement = document.getElementById("typing");
       function typing() {
         if (i < text.length) {
-          document.getElementById("typing").innerHTML += text[i++];
+          typingElement.textContent += text[i++];
           setTimeout(typing, 50);
         }
       }
