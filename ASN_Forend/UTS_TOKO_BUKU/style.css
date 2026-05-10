@@ -1,0 +1,337 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:#f4f4f4;
+}
+
+/* HEADER */
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:linear-gradient(90deg,#111827,#1e3a8a);
+  color:white;
+  padding:15px 20px;
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+
+.logo{
+  font-weight:bold;
+}
+
+nav a{
+  color:white;
+  margin:0 10px;
+  text-decoration:none;
+}
+
+nav a:hover{
+  color:#facc15;
+}
+
+/* CLOCK */
+#clock{
+  font-weight:bold;
+}
+
+/* DARK BUTTON */
+.dark-btn{
+  padding:8px 12px;
+  border:none;
+  border-radius:8px;
+  background:#facc15;
+  cursor:pointer;
+}
+
+/* CART */
+.cart{
+  background:#facc15;
+  color:black;
+  padding:5px 10px;
+  border-radius:20px;
+  font-weight:bold;
+}
+
+/* HERO */
+.hero{
+  text-align:center;
+  padding:70px 20px;
+  background:linear-gradient(135deg,#3b82f6,#1e3a8a);
+  color:white;
+}
+
+.hero h1{
+  font-size:40px;
+}
+
+/* SLIDER */
+.slider img{
+  width:100%;
+  height:400px;
+  object-fit:cover;
+}
+
+/* TITLE */
+.title{
+  text-align:center;
+  margin:30px 0;
+}
+
+/* SEARCH */
+#search{
+  width:80%;
+  padding:12px;
+  margin:20px auto;
+  display:block;
+  border-radius:10px;
+  border:1px solid #ccc;
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+  padding:20px;
+}
+
+/* CARD */
+.card{
+  background:white;
+  padding:20px;
+  border-radius:12px;
+  text-align:center;
+  box-shadow:0 10px 20px rgba(0,0,0,0.1);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 20px 30px rgba(0,0,0,0.2);
+}
+
+.card img{
+  width:100%;
+  border-radius:10px;
+}
+
+button{
+  margin-top:10px;
+  padding:10px;
+  border:none;
+  border-radius:6px;
+  background:#1e3a8a;
+  color:white;
+  cursor:pointer;
+}
+
+button:hover{
+  background:#facc15;
+  color:black;
+}
+
+/* LOVE */
+.love{
+  background:red;
+}
+
+/* PAGE */
+.page{
+  padding:40px;
+  text-align:center;
+}
+
+.page p{
+  margin-top:15px;
+}
+
+/* LOGIN */
+.login-body{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  background:linear-gradient(135deg,#1e3a8a,#3b82f6);
+}
+
+.login-box{
+  background:white;
+  padding:30px;
+  border-radius:12px;
+  width:300px;
+  text-align:center;
+}
+
+.login-box input{
+  width:100%;
+  margin:10px 0;
+  padding:10px;
+}
+
+/* CHECKOUT */
+.checkout-box{
+  text-align:center;
+  margin:30px;
+}
+
+/* TOAST */
+#toast{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#111827;
+  color:white;
+  padding:15px;
+  border-radius:10px;
+  display:none;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:15px;
+  background:#111827;
+  color:white;
+  margin-top:20px;
+}
+
+/* DARK MODE */
+.dark{
+  background:#111827;
+  color:white;
+}
+
+.dark .card,
+.dark .page,
+.dark .login-box{
+  background:#1f2937;
+  color:white;
+}
+
+.dark input{
+  background:#374151;
+  color:white;
+}
+
+/* RESPONSIVE */
+.menu-toggle{
+  display:none;
+  font-size:24px;
+  cursor:pointer;
+}
+
+@media(max-width:768px){
+
+  .grid{
+    grid-template-columns:1fr;
+  }
+
+  nav{
+    display:none;
+    flex-direction:column;
+    position:absolute;
+    top:60px;
+    right:0;
+    background:#1e3a8a;
+    width:200px;
+    padding:15px;
+  }
+
+  nav.show{
+    display:flex;
+  }
+
+  .menu-toggle{
+    display:block;
+  }
+
+  .hero h1{
+    font-size:28px;
+  }
+
+}
+
+@media(max-width:768px){
+
+  header{
+    padding:15px;
+  }
+
+  .logo{
+    font-size:14px;
+  }
+
+  nav{
+    display:none;
+    flex-direction:column;
+    position:absolute;
+    top:60px;
+    right:0;
+    width:200px;
+    background:#1e3a8a;
+    padding:15px;
+    border-radius:0 0 0 10px;
+  }
+
+  nav.show{
+    display:flex;
+  }
+
+  nav a{
+    margin:10px 0;
+  }
+
+  .menu-toggle{
+    display:block;
+  }
+
+  .hero{
+    padding:50px 15px;
+  }
+
+  .hero h1{
+    font-size:24px;
+  }
+
+  .hero p{
+    font-size:14px;
+  }
+
+  .slider img{
+    height:220px;
+  }
+
+  .grid{
+    grid-template-columns:1fr;
+    padding:15px;
+  }
+
+  .card{
+    width:100%;
+  }
+
+  .card img{
+    height:250px;
+    object-fit:cover;
+  }
+
+  #search{
+    width:90%;
+  }
+
+  .login-box{
+    width:90%;
+  }
+
+}
